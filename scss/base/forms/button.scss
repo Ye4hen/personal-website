@@ -1,0 +1,20 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: toRem(15) toRem(20);
+	background-color: transparent;
+	border: 1px solid $secondaryColor;
+	border-radius: toRem(12);
+	justify-content: center;
+	transition: all 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $secondaryColor;
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}

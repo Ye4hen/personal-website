@@ -1,0 +1,151 @@
+//====================================================================================================
+
+.contacts {
+
+	&__block{
+		@include adaptiveValue("margin-bottom", 40, 25);
+	}
+	
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+		}
+	}
+	
+	// .contacts__form
+	&__form {
+		flex: 0 1 50%;
+	
+		@media (max-width: $mobile) {
+			flex: 0 0 auto;
+			width: 100%;
+		}
+	}
+	
+	// .contacts__body
+	&__body {
+		flex: 0 1 50%;
+		@include adaptiveValue("padding-left", 105, 20);
+	
+		@media (max-width: $mobile) {
+			flex: 0 0 auto;
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+	
+	// .contacts__list
+	&__list {
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(30);
+		}
+	}
+}
+
+.form {
+	display: grid;
+	gap: toRem(16);
+
+	// .form__item
+	&__item {
+		&:last-child {
+			padding-top: toRem(22);
+		}
+	}
+
+	// .form__input
+	&__input {
+		width: 100%;
+		height: toRem(48);
+		border-radius: toRem(8);
+		padding: toRem(0) toRem(24);
+		background-color: transparent;
+		border: 1px solid $secondaryColor;
+		color: $mainColor;
+
+		&::placeholder {
+			color: $mainColor;
+		}
+		
+		&._form-error {
+			color: crimson;
+			&::placeholder{
+				color: crimson;
+			}
+		}
+
+		&:focus {
+			&::placeholder {
+				color: $mainColor;
+			}
+		}
+	}
+
+	// .form__button
+	&__button {
+		width: 100%;
+	}
+
+	&__error {
+		padding: toRem(5) toRem(24) toRem(0) toRem(24);
+		color: crimson;
+		font-size: toRem(12);
+	}
+}
+
+textarea.form__input {
+	height: toRem(190);
+	resize: vertical;
+	padding: toRem(24);
+}
+
+.list-contacts {
+	display: grid;
+	@include adaptiveValue("gap", 40, 15);
+	&__item {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 15, 5);
+	}
+
+	&__icon {
+		font-size: toRem(20);
+		transition: color 0.3s;
+	}
+
+	&__links {
+		display: grid;
+		@include adaptiveValue("gap", 10, 5);
+	}
+
+	&__title {
+		font-size: toRem(18);
+		font-weight: 600;
+		transition: color 0.3s;
+		&:not(:last-child){
+			@include adaptiveValue('margin-bottom', 10, 5);
+		}
+	}
+
+	&__text {
+		transition: color 0.3s;
+		@media(any-hover:hover){
+			&:hover{
+					color: $secondaryColor;
+			}
+		}
+	}
+}
+
+.footer {
+	padding-bottom: toRem(30);
+
+	&__copy {
+		text-align: center;
+	}
+}
+
+//====================================================================================================
