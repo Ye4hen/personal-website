@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://yevhenbosak-212e1.web.app/sitemap.xml

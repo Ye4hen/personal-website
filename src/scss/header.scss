@@ -1,0 +1,218 @@
+//====================================================================================================
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	transition: all 0.3s ease 0s;
+	padding-top: toRem(10);
+	padding-bottom: toRem(10);
+	// @include adaptiveValue("padding-top", 30, 15, 0, $containerWidth, 768);
+	// @include adaptiveValue("padding-bottom", 30, 15, 0, $containerWidth, 768);
+	background-color: rgba(0, 0, 0, 0.6);
+	&._header-scroll {
+		padding-top: toRem(10);
+		padding-bottom: toRem(10);
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap:toRem(15);
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 5;
+		width: toRem(90);
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__menu {}
+
+	&__socials{
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 20, 15, 0, 768, 320);
+	}
+	
+	&__socials-body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		position: relative;
+		// display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 15, 8);
+		z-index: 5;
+		@media (max-width:$mobileSmall){
+			gap: toRem(10);
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	
+	&__social {
+		span{
+			position: absolute;
+			width: 0.0625rem;
+			height: 0.0625rem;
+			padding: 0;
+			margin: -0.0625em;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border: 0;
+		}
+		&::before{
+			font-size: toRem(25);
+		}
+		transition: color 0.3s ease 0s;
+		@media(any-hover:hover){
+			&:hover{
+				color: $secondaryColor;
+			}
+		}
+	}
+	._icon-s-whatsapp{
+		&::before {
+			font-size: toRem(28.5);
+		}
+	}
+	._icon-s-telegram{
+		&::before {
+			font-size: toRem(25.9);
+		}
+	}
+}
+
+.menu {
+	
+	&__body {
+		@media (max-width:$mobile){
+			position: fixed;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: end;
+			flex-direction: column;
+			background-color: #142f3d;
+			transition: left 0.3s ;
+			overflow: auto;
+			@include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
+			padding-left: toRem(15);
+			padding-right: toRem(15);
+			padding-bottom: toRem(30);
+			gap:toRem(30);
+			.menu-open &{
+				left: 0;
+			}
+			&::before{
+				content:'';
+				position: fixed;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s;
+				width: 100%;
+				height: toRem(110);
+				background-color: #25414f;
+				z-index: 2;
+				.menu-open &{
+					left: 0;
+				}
+			}
+		}
+	}
+	
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 40, 20, 0,$maxWidthContainer,768);
+		row-gap: toRem(5);
+		@media (max-width: $mobile) {
+			align-items: end;
+			flex-direction: column;
+			row-gap: toRem(40);
+			text-align: right;
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		font-size: toRem(18);
+		@media (max-width: $mobile) {
+			font-size: toRem(40);
+		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $secondaryColor;
+			}
+		}
+	}
+
+	&__icon {}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+

@@ -1,0 +1,68 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-css:before {
+	content: "\e900";
+}
+
+._icon-email:before {
+	content: "\e901";
+}
+
+._icon-facebook:before {
+	content: "\e902";
+}
+
+._icon-html:before {
+	content: "\e903";
+}
+
+._icon-js:before {
+	content: "\e904";
+}
+
+._icon-location:before {
+	content: "\e905";
+}
+
+._icon-money:before {
+	content: "\e906";
+}
+
+._icon-phone:before {
+	content: "\e907";
+}
+
+._icon-s-github:before {
+	content: "\e908";
+}
+
+._icon-s-linkedIn:before {
+	content: "\e909";
+}
+
+._icon-s-telegram:before {
+	content: "\e90a";
+}
+
+._icon-s-whatsapp:before {
+	content: "\e90b";
+}
+
+._icon-vuejs:before {
+	content: "\e90c";
+}

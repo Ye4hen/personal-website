@@ -1,0 +1,198 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+/*=================================block==========================================================*/
+
+.block {
+	display: flex;
+	flex-direction: column;
+	
+	// gap:toRem(30);
+	@include adaptiveValue("gap", 40, 15);
+
+	&--inline{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap:toRem(20);
+		@media (max-width:$mobileSmall){
+			text-align: center;
+			justify-content: center;
+		}
+		.block__link{
+			margin-right: 0;
+		}
+	}
+
+	&--center{
+		align-items: center;
+		text-align: center;
+		@include adaptiveValue("gap", 30, 15);
+	}
+
+	&__title {
+		font-family: "Playfair Display";
+		@include adaptiveValue("font-size", 60, 35);
+		@extend %animate;
+	}
+	
+	&__title--big {
+		@include adaptiveValue("font-size", 75, 40);
+		font-weight: 700;
+		max-width: toRem(650);
+		@media (min-width:$mobileSmall){
+			span{
+				white-space: nowrap;
+			}
+		}
+	}
+
+	&__text {
+		max-width: toRem(650);
+		@extend %animate;
+		// color: #ccc;
+		// font-weight: 500;
+	}
+
+	&__buttons{
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(15);
+		a{
+			margin-right: 0px;
+		}
+		@media (max-width:$tablet){
+			justify-content: center;
+		}
+		@media (max-width:$mobileSmall){
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		@extend %animate;
+		@media (min-width:$tablet){
+			margin-right: auto; 
+		}
+	}
+}
+
+/*================================section===========================================================*/
+
+.section{
+	@include adaptiveValue("padding-top", 200, 120);
+	padding-bottom: toRem(100);
+	&-full{
+		// padding-top: toRem(250);
+		@media (min-width:$tablet){
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.section-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap:toRem(30);
+	@media (max-width:$tablet){
+		flex-direction: column;
+		text-align: center;
+		@include adaptiveValue("row-gap", 50, 30, 0, 991.98, 320);
+	}
+}
+
+/*===========================================================================================*/
+
+p{
+	line-height: 1.5;
+	&:not(:last-child){
+		margin-bottom: toRem(15);
+	}
+}
+
+/*===========================================================================================*/
+
+.highlighted-title{
+	position: relative;
+	white-space: nowrap;
+	
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: em(12, 75);
+		left: em(10, 75);
+		width: 100%;
+		@include adaptiveValue("height", 5, 3);
+		background-color: $secondaryColor;
+	}
+}
+
+.highlighted-text{
+	color: $secondaryColor;
+	font-weight: 600;
+}
+
+/*===========================================================================================*/
+
+
+
+/*===========================================================================================*/
+
+%animate {
+	transform: translate(0px, toRem(100));
+	opacity: 0;
+	transition: all 1s;
+
+	.previous-section & {
+		transform: translate(0px, toRem(-100));
+	}
+
+	.next-section & {
+		transform: translate(0px, toRem(100));
+	}
+
+	.active-section & {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+/*===========================================================================================*/
+
+@keyframes imgAnim {
+	from {
+		// opacity: 0;
+		transform: scale(0.7);
+	}
+
+	to {
+		// opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/*===========================================================================================*/
+
+.mouse-down{
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+}
+
+
+/*===========================================================================================*/
+
+.visually-hidden{
+	position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625em;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
