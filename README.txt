@@ -1,3 +1,11 @@
+# Project set up:
+1. yarn install
+2. yarn dev
+
+# Deploy on firebase:
+1. firebase login
+2. firebase deploy --only hosting
+
 Сподіваюсь, "Чертоги Фрілансера" допоможуть зекономити чимало часу
 і отримати задоволення від розробки :)
 
