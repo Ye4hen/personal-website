@@ -1,39 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Yevhen Bosak | Nice to meet you! I'm Yevhen Bosak"
-})
+  @@include('html/_head.htm', { "title":"Yevhen Bosak | Nice to meet you! I'm Yevhen Bosak" })
 
-<body>
-	<div data-fp class="wrapper">
-		@@include('html/_header.htm',{})
-		<main class="page">
-			<section data-watch data-fp-section class="hero section section-full" id="hero">
-				<div data-prlx-parent class="hero__container section-container">
-					<div class="hero__block block">
-						<h1 class="block__title block__title--big">
-							Nice to meet you! <span> I’m <span class="highlighted-title">Yevhen Bosak</span></span>.
-						</h1>
-						<div class="block__text">
-							<p>
-								Based in Warsaw, I’m a front-end dev with 2.5+ years’ experience crafting fast, user-friendly UIs and exploring back-end skills on the side.
-							</p>
-						</div>
-						<div class="block__buttons">
-							<a data-goto="#contacts" href="#" class="block__link button">
-								Contact Me
-							</a>
-							<a href="./files/Yevhen_Bosak_Front-End.pdf" download class="block__link button">
-								Download Resume
-							</a>
-						</div>
-					</div>
-					<div class="hero__picture">
-						<div class="hero__image">
-							<img src="@img/hero/hero.jpg" alt="Yevhe Bosak's image">
-						</div>
-					</div>
-					<!-- <div data-coefficient="100" data-prlx data-direction="1" class="hero-block__icons icons-hero-block">
+  <body>
+    <div data-fp class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section
+          data-watch
+          data-fp-section
+          class="hero section section-full"
+          id="hero"
+        >
+          <div data-prlx-parent class="hero__container section-container">
+            <div class="hero__block block">
+              <h1 class="block__title block__title--big">
+                Nice to meet you!
+                <span>
+                  I’m <span class="highlighted-title">Yevhen Bosak</span></span
+                >.
+              </h1>
+              <div class="block__text">
+                <p>
+                  Based in Warsaw, I’m a front-end engineer with 5+ years of experience building fast, accessible, and reliable interfaces in Vue/Nuxt, with a strong focus on performance and growing full-stack skills (Laravel / Nest).
+                </p>
+              </div>
+              <div class="block__buttons">
+                <a data-goto="#contacts" href="#" class="block__link button">
+                  Contact Me
+                </a>
+                <a
+                  href="./files/Yevhen_Bosak_Front-End.pdf"
+                  download
+                  class="block__link button"
+                >
+                  Download Resume
+                </a>
+              </div>
+            </div>
+            <div class="hero__picture">
+              <div class="hero__image">
+                <img src="@img/hero/hero.jpg" alt="Yevhe Bosak's image" />
+              </div>
+            </div>
+            <!-- <div data-coefficient="100" data-prlx data-direction="1" class="hero-block__icons icons-hero-block">
 						<div data-prlx-mouse data-prlx-cx="10" data-prlx-cy="10"
 							class="icons-hero-block__item icons-hero-block__item_1">
 							<div class="_icon-css"></div>
@@ -63,295 +73,391 @@
 							<img src="@img/hero/ukraine.png" alt="Ukrainian coat of arms">
 						</div>
 					</div> -->
-				</div>
-			</section>
-			<section data-fp-section class="about section section-full" id="about">
-				<div class="about__container section-container">
-					<div class="about__block block">
-						<h2 class="block__title block__title">
-							About me
-						</h2>
-						<div class="block__text">
-							<p>
-								Front End developer with <span class="highlighted-text">2.5+ years</span> of commercial experience, working in teams ranging from 1 to 12 members. <span class="highlighted-text">Participated in</span> the <span class="highlighted-text">full cycle of</span> front-end <span class="highlighted-text">development</span>: from communicating with the clients to define user needs and design specs to implementing optimized, interactive UIs with a reusable component system, fast load times, and automated testing workflows. <span class="highlighted-text">Enhanced</span> web <span class="highlighted-text">performance</span> by accelerating page speeds, improving SEO indicators, refining UX, and establishing modular, reusable component system.
-							</p>
-							<p>In addition to core front-end knowledge, <span class="highlighted-text">implemented testing solutions</span> using Jest to ensure high-quality, reliable codebases. <span class="highlighted-text">Passionate</span> about expanding skills into <span class="highlighted-text">back-end</span> development and actively explore these topics in my spare time.
-							</p>
-						</div>
-						<a data-goto="#contacts" href="#" class="block__link button">
-							Contact Me
-						</a>
-					</div>
-					<div class="about__picture">
-						<div class="about__image-wrapper">
-							<!-- <img src="@img/about/01.jpg" alt="Yevhen Bosak in the cool coat">. -->
-							<div class="image-loader"></div>
-							<img src="@img/about/05.jpg" alt="Yevhen Bosak in the cool coat" loading="lazy" class="about__image" >
-							<!-- <img src="@img/about/10.jpg" alt="Yevhen Bosak in the cool coat">. -->
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-fp-section class="services section section-full" id="services">
-				<div class="services__container">
-					<div class="services__block block--center block">
-						<h2 class="block__title block__title">
-							My services
-						</h2>
-						<div class="block__text services__text">
-							<p>
-								Hover to see them
-							</p>
-						</div>
-					</div>
-					<div class="services__cards">
-						<div class="services__card ">
-							<div class="services__face services__face1 ">
-								<div class="services__content">
-									<img src="@img/services/responsive.png" alt="Cross-Browser & Performance Optimization">
-									<h3>Cross-Browser & Performance Optimization</h3>
-								</div>
-							</div>
-							<div class="services__face services__face2 ">
-								<div class="services__content">
-									<p>
-										I craft adaptive layouts that work flawlessly across browsers, boosting performance like a 41% FCP and 36% LCP gain for seamless, fast user experiences.
-									</p>
-									<a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
-								</div>
-							</div>
-						</div>
-						<div class="services__card ">
-							<div class="services__face services__face1">
-								<div class="services__content">
-									<img src="@img/services/front-end.png" alt="Front-End Development">
-									<h3>Front-End Development</h3>
-								</div>
-							</div>
-							<div class="services__face services__face2">
-								<div class="services__content">
-									<p>
-										With Vue.js, Nuxt.js, and TypeScript, I build interactive, optimized UIs, modular components and 90% test coverage with Jest for stunning, reliable web apps.
-									</p>
-									<a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
-								</div>
-							</div>
-						</div>
-						<div class="services__card">
-							<div class="services__face services__face1">
-								<div class="services__content">
-									<img src="@img/services/cms-dev.png" alt="SEO & UX Enhancement">
-									<h3>SEO & UX Enhancement</h3>
-								</div>
-							</div>
-							<div class="services__face services__face2">
-								<div class="services__content">
-									<p>
-										I elevate SEO scores (e.g., from 59 to 93) and refine UX with TailwindCSS and Vuetify, ensuring your site ranks high and delights users.
-									</p>
-									<a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch data-fp-section class="career section" id="career">
-				<div data-tabs="768" class="career__container">
-					<div class="career__body">
-						<div class="career__title title">
-							<h2 class="block__title">Work Experience</h2>
-						</div>
-						<nav data-tabs-titles class="career__navigation navigation-career">
-							<button type="button" class="navigation-career__title _tab-active">IKOL System</button>
-							<button type="button" class="navigation-career__title">Panda Team</button>
-						</nav>
-						<div data-tabs-body class="career__content content-career">
-							<div class="content-career__body">
-								<div class="content-career__header">
-									<div class="content-career__title">Full-stack Developer at <a href="https://www.ikol.com/" target="_blank" class="content-career__link-title">IKOL System</a></div>
-									<div class="content-career__location">Warsaw</div>
-									<div class="content-career__time">Apr 2024 - Present · Full-time</div>
-									<div class="content-career__categories">
-										<span class="category-link">Vue,</span>
-										<span class="category-link">JavaScript,</span>
-										<span class="category-link">TypeScript,</span>
-										<span class="category-link">PHP,</span>
-										<span class="category-link">HTML,</span>
-										<span class="category-link">CSS,</span>
-										<span class="category-link">SCSS,</span>
-										<span class="category-link">BEM,</span>
-										<span class="category-link">Jest,</span>
-										<span class="category-link">PHPUnit,</span>
-										<span class="category-link">etc.</span>
-									</div>
-								</div>
-								<div class="content-career__main">
-									<ul class="content-career__list list-content-career">
-										<li class="list-content-career__item">
-											<span>Implemented</span> cross browser and <span>adaptive</span> layouts in close cooperation with UI/UX designer
-										</li>
-										<li class="list-content-career__item">
-											<span>Designed and developed RESTful APIs</span>, ensuring seamless data flow and application performance. 
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="content-career__body">
-								<div class="content-career__header">
-									<div class="content-career__title">Front-end Developer at <a href="https://pandateam.net/" target="_blank"
-											class="content-career__link-title">Panda Team</a></div>
-									<div class="content-career__location">Remote</div>
-									<div class="content-career__time">Feb 2023 - Apr 2025 · 2.5 Years</div>
-									<div class="content-career__categories">
-										<span class="category-link">Nuxt 2&3,</span>
-										<span class="category-link">Vue 2&3,</span>
-										<span class="category-link">JavaScript,</span>
-										<span class="category-link">TypeScript,</span>
-										<span class="category-link">HTML,</span>
-										<span class="category-link">CSS,</span>
-										<span class="category-link">SCSS,</span>
-										<span class="category-link">TailwindCSS,</span>
-										<span class="category-link">Vuetify,</span>
-										<span class="category-link">PHP,</span>
-										<span class="category-link">etc.</span>
-									</div>
-								</div>
-								<div class="content-career__main">
-									<ul class="content-career__list list-content-career">
-										<li class="list-content-career__item">
-											<span>Improved</span> landing page <span>SEO</span> score from <span>59</span> to <span>93</span> using the best performance optimization practices
-										</li>
-										<li class="list-content-career__item">
-											Enhanced website performance metrics by optimizing core web vitals, achieving a <span>41.3% FCP</span> and <span>36.8% LCP</span> boost
-										</li>
-										<li class="list-content-career__item">
-											<span>Personally</span> communicated with the <span>customer</span> to specify UI requirements and deliver timely features
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-fp-section class="skills section section-full" id="skills">
-				<div class="skills__container">
-					<div class="skills__block block--center block">
-						<h2 class="block__title block__title">
-							My skills
-						</h2>
-						<div class="block__text">
-							<div class="skills__block-text">
-								<p><span>Front-End:</span> Vue.js 2&3, Nuxt.js 2&3, JavaScript, ES6+, Typescript, HTML, CSS, SASS, SCSS, BEM, RWD, Tail-wind CSS, Vuetify, Quasar, Vue Router, Vuex, Pinia, Vuelidate, VueUse</p>
-									<p><span>Back-End:</span> Node.js, Nest.js, PHP, REST API, GraphQL, Swagger</p>
-									<p><span>Testing:</span> Jest, PHPUnit</p>
-									<p><span>Other:</span> Eslint, Prettier, Webpack, Vite, Git, OOP, FP, SOLID, DRY, Figma</p>
-							</div>
-							<p>
-								More detailed information:
-							</p>
-						</div>
-					</div>
-					<div data-watch class="skills__items">
-						<div class="skills__item item-skill">
-							<div class="item-skill__label">HTML & CSS(SCSS)</div>
-							<div class="item-skill__value">
-								<div data-digits-counter data-digits-counter-speed="900">90</div>
-								<div>%</div>
-							</div>
-							<div class="item-skill__line item-skill__line--90">
-								<span></span>
-							</div>
-						</div>
-						<div class="skills__item item-skill">
-							<div class="item-skill__label">JavaScript/TypeScript</div>
-							<div class="item-skill__value">
-								<div data-digits-counter data-digits-counter-speed="900">80</div>
-								<div>%</div>
-							</div>
-							<div class="item-skill__line item-skill__line--80">
-								<span></span>
-							</div>
-						</div>
-						<div class="skills__item item-skill">
-							<div class="item-skill__label">Vue.js & Nuxt.js</div>
-							<div class="item-skill__value">
-								<div data-digits-counter data-digits-counter-speed="900">80</div>
-								<div>%</div>
-							</div>
-							<div class="item-skill__line item-skill__line--80">
-								<span></span>
-							</div>
-						</div>
-						<div class="skills__item item-skill">
-							<div class="item-skill__label">PHP</div>
-							<div class="item-skill__value">
-								<div data-digits-counter data-digits-counter-speed="900">70</div>
-								<div>%</div>
-							</div>
-							<div class="item-skill__line item-skill__line--70">
-								<span></span>
-							</div>
-						</div>
-						<div class="skills__item item-skill">
-							<div class="item-skill__label">Jest</div>
-							<div class="item-skill__value">
-								<div data-digits-counter data-digits-counter-speed="900">60</div>
-								<div>%</div>
-							</div>
-							<div class="item-skill__line item-skill__line--60">
-								<span></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-fp-section class="faq section section-full" id="faq">
-				<div class="faq__container">
-					<div class="faq__block block">
-						<h2 class="block__title block__title">
-							FAQ
-						</h2>
-						<div class="block__text">
-							<p>
-								Still have questions? <a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
-							</p>
-						</div>
-					</div>
-					<div data-spollers data-one-spoller class="faq__spollers spollers-faq">
-						<details data-open class="spollers-faq__item">
-							<summary class="spollers-faq__title">What services do you offer as a front-end developer?</summary>
-							<div class="spollers-faq__body">
-								I specialize in building fast, responsive websites and web apps using Vue.js, Nuxt.js, and TypeScript, with a focus on optimized UIs, reusable components, and top-notch performance—like boosting FCP by 41% or LCP by 36%. I also handle testing with Jest for reliability and can dip into back-end work with Node.js or PHP when needed.
-							</div>
-						</details>
-						<details class="spollers-faq__item">
-							<summary class="spollers-faq__title">How do you ensure a website performs well?</summary>
-							<div class="spollers-faq__body">
-								I boost website performance by tackling both SEO and loading speed. For SEO, I’ve lifted scores by 34% — fixing missing sitemaps, tweaking meta tags, and adding JSON-LD to climb Google rankings and pull in more clients. On the loading side, I refactor code, optimize images and animations, use lazy loading for components, preload key assets, and cut unnecessary API calls—plus, I’ve added Vue virtual scrolling for smooth handling of big data lists, making sites fast and user-friendly.
-							</div>
-						</details>
-						<details class="spollers-faq__item">
-							<summary class="spollers-faq__title">What’s your approach to working with clients?</summary>
-							<div class="spollers-faq__body">
-								I start by chatting directly with you to nail down your needs and design specs, then deliver interactive, user-friendly solutions on time — think adaptive layouts crafted with UI/UX designers or custom features. It’s all about collaboration and results.
-							</div>
-						</details>
-						<details class="spollers-faq__item">
-							<summary class="spollers-faq__title">Why should I choose you for my project?</summary>
-							<div class="spollers-faq__body">
-								With <span class="highlighted-text">2 years</span> of experience across teams of 1-8, I bring proven skills — <span class="highlighted-text">90% test coverage</span>, modular components, and a passion for both front-end and back-end (Node.js, PHP). My work’s already <span class="highlighted-text">sped up sites</span> and <span class="highlighted-text">delighted</span> clients — let’s make yours next!
-							</div>
-						</details>
-					</div>
-				</div>
-			</section>
+          </div>
+        </section>
+        <section data-fp-section class="about section section-full" id="about">
+          <div class="about__container section-container">
+            <div class="about__block block">
+              <h2 class="block__title block__title">About me</h2>
+              <div class="block__text">
+                <p>
+                  Front-end developer with <span class="highlighted-text">5+ years</span> of commercial experience, contributing across teams from solo projects to groups of a dozen. I take features from client discovery to production, owning UX specs, component design and performant implementations — shipping reusable systems, fast load times and automated test pipelines. I’ve <span class="highlighted-text">boosted organic visibility ~34%</span> and delivered ≈<span class="highlighted-text">40%</span> improvements to Core Web Vitals through targeted SEO and performance work.
+                </p>
+                <p>
+                  In addition to core front-end work, I’ve implemented testing strategies (Jest & Cypress) and CI workflows to keep codebases stable and reviewable. I’m passionate about growing my backend expertise and regularly experiment with server patterns and deployment automation in my spare time.
+                </p>
+              </div>
+              <a data-goto="#contacts" href="#" class="block__link button">
+                Contact Me
+              </a>
+            </div>
+            <div class="about__picture">
+              <div class="about__image-wrapper">
+                <!-- <img src="@img/about/01.jpg" alt="Yevhen Bosak in the cool coat">. -->
+                <div class="image-loader"></div>
+                <img
+                  src="@img/about/05.jpg"
+                  alt="Yevhen Bosak in the cool coat"
+                  loading="lazy"
+                  class="about__image"
+                />
+                <!-- <img src="@img/about/10.jpg" alt="Yevhen Bosak in the cool coat">. -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-fp-section
+          class="services section section-full"
+          id="services"
+        >
+          <div class="services__container">
+            <div class="services__block block--center block">
+              <h2 class="block__title block__title">My services</h2>
+              <div class="block__text services__text">
+                <p>Hover to see them</p>
+              </div>
+            </div>
+            <div class="services__cards">
+              <div class="services__card">
+                <div class="services__face services__face1">
+                  <div class="services__content">
+                    <img
+                      src="@img/services/responsive.png"
+                      alt="Cross-Browser & Performance Optimization"
+                    />
+                    <h3>Cross-Browser & Performance Optimization</h3>
+                  </div>
+                </div>
+                <div class="services__face services__face2">
+                  <div class="services__content">
+                    <p>
+                      I craft adaptive layouts that work flawlessly across
+                      browsers, boosting performance like a 41% FCP and 36% LCP
+                      gain for seamless, fast user experiences.
+                    </p>
+                    <a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
+                  </div>
+                </div>
+              </div>
+              <div class="services__card">
+                <div class="services__face services__face1">
+                  <div class="services__content">
+                    <img
+                      src="@img/services/front-end.png"
+                      alt="Front-End Development"
+                    />
+                    <h3>Front-End Development</h3>
+                  </div>
+                </div>
+                <div class="services__face services__face2">
+                  <div class="services__content">
+                    <p>
+                      With Vue.js, Nuxt.js, and TypeScript, I build interactive,
+                      optimized UIs, modular components and 90% test coverage
+                      with Jest for stunning, reliable web apps.
+                    </p>
+                    <a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
+                  </div>
+                </div>
+              </div>
+              <div class="services__card">
+                <div class="services__face services__face1">
+                  <div class="services__content">
+                    <img
+                      src="@img/services/cms-dev.png"
+                      alt="SEO & UX Enhancement"
+                    />
+                    <h3>SEO & UX Enhancement</h3>
+                  </div>
+                </div>
+                <div class="services__face services__face2">
+                  <div class="services__content">
+                    <p>
+                      I elevate SEO scores (e.g., from 59 to 93) and refine UX
+                      with TailwindCSS and Vuetify, ensuring your site ranks
+                      high and delights users.
+                    </p>
+                    <a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-watch data-fp-section class="career section" id="career">
+          <div data-tabs="768" class="career__container">
+            <div class="career__body">
+              <div class="career__title title">
+                <h2 class="block__title">Work Experience</h2>
+              </div>
+              <nav
+                data-tabs-titles
+                class="career__navigation navigation-career"
+              >
+                <button
+                  type="button"
+                  class="navigation-career__title _tab-active"
+                >
+                  IKOL System
+                </button>
+                <button type="button" class="navigation-career__title">
+                  Panda Team
+                </button>
+              </nav>
+              <div data-tabs-body class="career__content content-career">
+                <div class="content-career__body">
+                  <div class="content-career__header">
+                    <div class="content-career__title">
+                      Full-stack Developer at
+                      <a
+                        href="https://www.ikol.com/"
+                        target="_blank"
+                        class="content-career__link-title"
+                        >IKOL System</a
+                      >
+                    </div>
+                    <div class="content-career__location">Warsaw</div>
+                    <div class="content-career__time">
+                      Apr 2024 - Present · Full-time
+                    </div>
+                    <div class="content-career__categories">
+                      <span class="category-link">Vue 2&3,</span>
+                      <span class="category-link">TypeScript,</span>
+                      <span class="category-link">JavaScript,</span>
+                      <span class="category-link">PHP,</span>
+                      <span class="category-link">HTML,</span>
+                      <span class="category-link">CSS,</span>
+                      <span class="category-link">SCSS,</span>
+                      <span class="category-link">BEM,</span>
+                      <span class="category-link">Jest,</span>
+                      <span class="category-link">PHPUnit,</span>
+                      <span class="category-link">etc.</span>
+                    </div>
+                  </div>
+                  <div class="content-career__main">
+                    <ul class="content-career__list list-content-career">
+                      <li class="list-content-career__item">
+                        <span>Led migration</span> from Vue 2 + JavaScript → Vue
+                        3 + TypeScript, <span>modernizing</span> the codebase,
+                        <span>improving DX</span>, and enabling stricter typing
+                        and safer refactors.
+                      </li>
+                      <li class="list-content-career__item">
+                        <span>Introduced</span> a PR checklist and code-review
+                        SLAs; enforced stricter review standards that
+                        <span>reduced</span> critical production bugs by
+                        <span>50%</span>.
+                      </li>
+                      <li class="list-content-career__item">
+                        <span>Mentored and coached</span> 3 engineers, driving
+                        peer reviews, onboarding, and technical growth.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="content-career__body">
+                  <div class="content-career__header">
+                    <div class="content-career__title">
+                      Front-end Developer at
+                      <a
+                        href="https://pandateam.net/"
+                        target="_blank"
+                        class="content-career__link-title"
+                        >Panda Team</a
+                      >
+                    </div>
+                    <div class="content-career__location">Remote</div>
+                    <div class="content-career__time">
+                      Feb 2021 - Apr 2024 · 3 Years
+                    </div>
+                    <div class="content-career__categories">
+                      <span class="category-link">Nuxt 2&3,</span>
+                      <span class="category-link">Vue 2&3,</span>
+                      <span class="category-link">JavaScript,</span>
+                      <span class="category-link">TypeScript,</span>
+                      <span class="category-link">HTML,</span>
+                      <span class="category-link">CSS,</span>
+                      <span class="category-link">SCSS,</span>
+                      <span class="category-link">TailwindCSS,</span>
+                      <span class="category-link">Vuetify,</span>
+                      <span class="category-link">PHP,</span>
+                      <span class="category-link">etc.</span>
+                    </div>
+                  </div>
+                  <div class="content-career__main">
+                    <ul class="content-career__list list-content-career">
+                      <li class="list-content-career__item">
+                        <span>Improved</span> landing page
+                        <span>SEO</span> score from <span>59</span> to
+                        <span>93</span> using the best performance optimization
+                        practices
+                      </li>
+                      <li class="list-content-career__item">
+                        Enhanced website performance metrics by optimizing core
+                        web vitals, achieving a <span>41.3% FCP</span> and
+                        <span>36.8% LCP</span> boost
+                      </li>
+                      <li class="list-content-career__item">
+                        <span>Personally</span> communicated with the
+                        <span>customer</span> to specify UI requirements and
+                        deliver timely features
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-fp-section
+          class="skills section section-full"
+          id="skills"
+        >
+          <div class="skills__container">
+            <div class="skills__block block--center block">
+              <h2 class="block__title block__title">My skills</h2>
+              <div class="block__text">
+                <div class="skills__block-text">
+                  <p>
+                    <span>Front-End:</span> Vue.js 2&3, Nuxt.js 2&3, JavaScript,
+                    ES6+, Typescript, HTML, CSS, SASS, SCSS, BEM, RWD, Tail-wind
+                    CSS, Vuetify, Quasar, Vue Router, Vuex, Pinia, Vuelidate,
+                    VueUse
+                  </p>
+                  <p>
+                    <span>Back-End:</span> PHP, Node.js, Nest.js, Laravel, REST
+                    API, GraphQL, Swagger
+                  </p>
+                  <p><span>Testing:</span> Cypress, Jest, PHPUnit</p>
+                  <p>
+                    <span>Other:</span> SSR, CSR, Eslint, Prettier, Webpack,
+                    Vite, Git, OOP, FP, SOLID, DRY, Figma
+                  </p>
+                </div>
+                <p>More detailed information:</p>
+              </div>
+            </div>
+            <div data-watch class="skills__items">
+              <div class="skills__item item-skill">
+                <div class="item-skill__label">HTML & CSS (SCSS, Tailwind)</div>
+                <div class="item-skill__value">
+                  <div data-digits-counter data-digits-counter-speed="900">90</div>
+                  <div>%</div>
+                </div>
+                <div class="item-skill__line item-skill__line--90"><span></span></div>
+              </div>
 
-		</main>
-		@@include('html/_footer.htm',{})
-	</div>
-	@@include('html/_js.htm',{})
-</body>
+              <div class="skills__item item-skill">
+                <div class="item-skill__label">JavaScript & TypeScript</div>
+                <div class="item-skill__value">
+                  <div data-digits-counter data-digits-counter-speed="900">90</div>
+                  <div>%</div>
+                </div>
+                <div class="item-skill__line item-skill__line--90"><span></span></div>
+              </div>
 
+              <div class="skills__item item-skill">
+                <div class="item-skill__label">Vue.js & Nuxt.js</div>
+                <div class="item-skill__value">
+                  <div data-digits-counter data-digits-counter-speed="900">95</div>
+                  <div>%</div>
+                </div>
+                <div class="item-skill__line item-skill__line--95"><span></span></div>
+              </div>
+
+              <div class="skills__item item-skill">
+                <div class="item-skill__label">Testing & QA (Cypress / Jest)</div>
+                <div class="item-skill__value">
+                  <div data-digits-counter data-digits-counter-speed="900">80</div>
+                  <div>%</div>
+                </div>
+                <div class="item-skill__line item-skill__line--80"><span></span></div>
+              </div>
+
+              <div class="skills__item item-skill">
+                <div class="item-skill__label">Backend (Nest & Laravel)</div>
+                <div class="item-skill__value">
+                  <div data-digits-counter data-digits-counter-speed="900">70</div>
+                  <div>%</div>
+                </div>
+                <div class="item-skill__line item-skill__line--70"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-fp-section class="faq section section-full" id="faq">
+          <div class="faq__container">
+            <div class="faq__block block">
+              <h2 class="block__title block__title">FAQ</h2>
+              <div class="block__text">
+                <p>
+                  Still have questions?
+                  <a href="mailto:bosak.yevhen.dev@gmail.com">Email Me</a>
+                </p>
+              </div>
+            </div>
+            <div
+              data-spollers
+              data-one-spoller
+              class="faq__spollers spollers-faq"
+            >
+              <details data-open class="spollers-faq__item">
+                <summary class="spollers-faq__title">
+                  What services do you offer as a front-end developer?
+                </summary>
+                <div class="spollers-faq__body">
+                  I specialize in building fast, responsive websites and web
+                  apps using Vue.js, Nuxt.js, and TypeScript, with a focus on
+                  optimized UIs, reusable components, and top-notch
+                  performance—like boosting FCP by 41% or LCP by 36%. I also
+                  handle testing with Jest for reliability and can dip into
+                  back-end work with Node.js or PHP when needed.
+                </div>
+              </details>
+              <details class="spollers-faq__item">
+                <summary class="spollers-faq__title">
+                  How do you ensure a website performs well?
+                </summary>
+                <div class="spollers-faq__body">
+                  I boost website performance by tackling both SEO and loading
+                  speed. For SEO, I’ve lifted scores by 34% — fixing missing
+                  sitemaps, tweaking meta tags, and adding JSON-LD to climb
+                  Google rankings and pull in more clients. On the loading side,
+                  I refactor code, optimize images and animations, use lazy
+                  loading for components, preload key assets, and cut
+                  unnecessary API calls—plus, I’ve added Vue virtual scrolling
+                  for smooth handling of big data lists, making sites fast and
+                  user-friendly.
+                </div>
+              </details>
+              <details class="spollers-faq__item">
+                <summary class="spollers-faq__title">
+                  What’s your approach to working with clients?
+                </summary>
+                <div class="spollers-faq__body">
+                  I start by chatting directly with you to nail down your needs
+                  and design specs, then deliver interactive, user-friendly
+                  solutions on time — think adaptive layouts crafted with UI/UX
+                  designers or custom features. It’s all about collaboration and
+                  results.
+                </div>
+              </details>
+              <details class="spollers-faq__item">
+                <summary class="spollers-faq__title">
+                  Why should I choose you for my project?
+                </summary>
+                <div class="spollers-faq__body">
+                  With <span class="highlighted-text">5+ years</span> of experience, I deliver pragmatic engineering: modular component systems, strong test coverage, and maintainable architecture. I’ve mentored peers, implemented PR checklists and review SLAs (reducing critical production bugs by ~50%), and shipped performance improvements that <span class="highlighted-text">sped up sites</span> and improved client outcomes — let’s make yours next.
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>
