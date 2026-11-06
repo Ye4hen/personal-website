@@ -603,12 +603,12 @@
         &--#{$percentage} {
           span {
             .previous-section & {
-              width: percentage(
+              width: math.percentage(
                 math.div($percentage, 100)
               ); // Sets width dynamically
             }
             .next-section & {
-              width: percentage(
+              width: math.percentage(
                 math.div($percentage, 100)
               ); // Same width for next section
             }
@@ -628,7 +628,7 @@
           width: 0;
         }
         to {
-          width: percentage(math.div($percentage, 100));
+          width: math.percentage(math.div($percentage, 100));
         }
       }
     }

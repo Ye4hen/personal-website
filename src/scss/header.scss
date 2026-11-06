@@ -7,8 +7,6 @@
 	width: 100%;
 	z-index: 50;
 	transition: all 0.3s ease 0s;
-	padding-top: toRem(10);
-	padding-bottom: toRem(10);
 	// @include adaptiveValue("padding-top", 30, 15, 0, $containerWidth, 768);
 	// @include adaptiveValue("padding-bottom", 30, 15, 0, $containerWidth, 768);
 	background-color: rgba(0, 0, 0, 0.6);
@@ -119,7 +117,7 @@
 				left: -100%;
 				transition: left 0.3s;
 				width: 100%;
-				height: toRem(110);
+				height: toRem(90);
 				background-color: #25414f;
 				z-index: 2;
 				.menu-open &{
